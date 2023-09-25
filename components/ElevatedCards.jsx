@@ -3,7 +3,7 @@ import React from 'react'
 
 const ElevatedCards = () => {
   return (
-    <View>
+   <View>
       <Text style={styles.textStyle}>Elevated Cards</Text>
       <ScrollView horizontal={true} style={styles.container}>
         <View style={[styles.card, styles.cardElevated]}>

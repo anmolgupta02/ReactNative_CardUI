@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   },
   card:{
     height: 350,
-    borderRadius: 20,
+    borderRadius: 10,
     marginVertical: 12,
     marginHorizontal: 10,
   },

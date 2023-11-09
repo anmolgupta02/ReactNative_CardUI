@@ -2,7 +2,7 @@
 /* eslint-disable prettier/prettier */
 // eslint-disable-next-line prettier/prettier
 import { Image, Linking, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import React from 'react'
+import React from 'react';
 
 export default function ActionCard() {
     function openWebsite(websiteLink : string) {
@@ -28,8 +28,12 @@ export default function ActionCard() {
         
          <View style={styles.footerContainer}>
             <TouchableOpacity  onPress={() => openWebsite('https://blog.learncodeonline.in/')}>
-                <Text style={styles.socialLink}>Read More!!</Text>
+                <Text style={styles.socialLink}>Read More</Text>
             </TouchableOpacity>
+            <TouchableOpacity onPress={()=> openWebsite('https://www.instagram.com/anmol.lucifer')}>
+              <Text style={styles.socialLink}>Follow Me</Text>
+            </TouchableOpacity>
+
          </View>
 
       </View>
@@ -39,18 +43,63 @@ export default function ActionCard() {
 
 const styles = StyleSheet.create({
     headingText:{
+        fontSize:24,
+        fontWeight:'bold',
+        paddingHorizontal: 8,
+    },
+    card:{ 
+      height: 360,
+      borderRadius: 6,
+      marginVertical: 10,
+      marginHorizontal: 10,
+    },
+    elevatedCard:{
+      backgroundColor: '#4C4B4B',
+      elevation : 3,
+      shadowOffset : {
+        width:1, 
+        height:2, 
+      }, 
+      shadowColor:'#333',
+      shadowOpacity : 0.5,
+
 
     },
-    card:{},
-    elevatedCard:{},
-    headingContainer:{},
-    headerText:{},
+    headingContainer:{
+      height: 40,
+      flexDirection: 'row',
+      justifyContent : 'center',
+      alignItems: 'center'
+    },
+    headerText:{
+      color :'#ffffff', 
+      fontSize: 16,
+      fontWeight: '600'
+    },
     cardImage:{
         height:200,
         marginBottom:20,
     },
-    bodyContainer:{},
-    footerContainer:{},
-    socialLink:{},
+    bodyContainer:{
+      padding:10,
+
+    },
+    footerContainer:{
+      padding:10,
+      flexDirection: 'row', //to make the text direction horizontal or vertical.
+      alignContent:'center',
+      justifyContent: 'space-evenly'
+
+
+    },
+    socialLink:{
+      fontSize: 16,
+      color:'#ffffff',
+      backgroundColor: '#000000',
+      paddingHorizontal: 20,
+      paddingVertical : 4,
+      borderRadius:6,
+
+    },
 
 })
